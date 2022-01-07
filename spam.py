@@ -54,19 +54,19 @@ try:
 except:
   pass
 
-conut = console.input('[cyan]Выберите вашу страну:\n\n[red][1] - Украина\n[2] - Россия\n[blue] >> ')
+conut = console.input('[cyan]Выберите вашу страну:\n\n[red][1] - Украина\n[2] - Россия\n\n[bold purple] >>> ')
 
-console.print("[purple]Введите номер телефонa (без +): ")
+console.print("[blue]Введите номер телефонa (без +): ")
 
-number = console.input("[blue] >> ")
+number = console.input("\n[bold purple] >>> ")
 
-proxy = console.input("[yellow]Использовать прокси? (y/n):\n[blue] >> ")
+proxy = console.input("[yellow]Использовать прокси? (y/n):\n[bold purple] >>> ")
 if proxy.lower() == "y":
         proxies = generate_proxy()
 else:
         proxies = None
 
-run = int(console.input('[green]Введите количество повторов (1-10):\n[blue] >> '))
+run = int(console.input('[green]Введите количество повторов (1-10):\n\n[bold purple] >>> '))
 
 def ukr():
         for _ in track(range(run)):
