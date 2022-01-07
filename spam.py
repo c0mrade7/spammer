@@ -56,17 +56,17 @@ except:
 
 conut = console.input('[yellow]Выберите вашу страну:\n\n[red][1] - Украина\n[2] - Россия\n[blue]spammer>> ')
 
-console.print("[purple]Введите номер телефонa (без +): \n")
+console.print("[purple]Введите номер телефонa (без +): ")
 
 number = console.input("[blue]spammer>> ")
 
-proxy = console.input("[cyan]Использовать прокси? (y/n):\n\n[blue]spammer>> ")
+proxy = console.input("[cyan]Использовать прокси? (y/n):\n[blue]spammer>> ")
 if proxy.lower() == "y":
         proxies = generate_proxy()
 else:
         proxies = None
 
-run = int(console.input('[green]Введите количество повторов (1-10):\n\n[blue]spammer>> '))
+run = int(console.input('[green]Введите количество повторов (1-10):\n[blue]spammer>> '))
 
 def ukr():
         for _ in track(range(run)):
